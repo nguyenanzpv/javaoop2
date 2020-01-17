@@ -14,7 +14,7 @@ public class Test {
         ReferenceBook rb=new ReferenceBook(1,new SimpleDateFormat("dd/MM/yyyy").parse("15/01/2020"),10000,10,"kim đồng",5);
         rb.getBook(1);
         rb.getAllBook();
-        System.out.println("Tổng tiền sách tham khảo "+rb.getToTalMoney());
+        System.out.println("Tổng tiền sách tham khảo: "+rb.getToTalMoney());
         System.out.println("Trung bình cộng của các sách tham khảo: "+rb.getAverageBook());
 
     }
