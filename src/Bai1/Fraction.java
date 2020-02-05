@@ -1,8 +1,8 @@
 package Bai1;
 
 public class Fraction{
-    private int tuSo=0;
-    private int mauSo=0;
+    private int tuSo;
+    private int mauSo;
 
     public Fraction(){
 
@@ -25,70 +25,72 @@ public class Fraction{
         return a;
     }
 
-    public void  reduce(){
+    public Fraction  reduce(){
         int ucln = UCLN(Math.abs(this.tuSo),Math.abs(this.mauSo));
         this.tuSo=this.tuSo/ucln;
         this.mauSo=this.mauSo/ucln;
-        System.out.println("Phan so toi gian: "+this.toString());
+        return this;
+        //System.out.println("Phan so toi gian: "+this.toString());
     }
 
-    public  void reciprocal(){
-        int temp=0;
-        temp=this.tuSo;
+    public  Fraction reciprocal(){
+        int temp=this.tuSo;
         this.tuSo=this.mauSo;
         this.mauSo=temp;
-        System.out.println("Phan so nghich dao: "+this.toString());
+        return this;
+        //System.out.println("Phan so nghich dao: "+this.toString());
     }
 
     public  Fraction add(Fraction f2){
-        this.tuSo=this.tuSo*f2.mauSo+this.mauSo*f2.tuSo;
-        this.mauSo=this.mauSo*f2.mauSo;
-        if(this.tuSo!=0)
+        Fraction ft=new Fraction();
+        ft.tuSo=this.tuSo*f2.mauSo+this.mauSo*f2.tuSo;
+        ft.mauSo=this.mauSo*f2.mauSo;
+        if(ft.tuSo!=0)
         {
-            this.reduce();
+            ft.reduce();
         }
-        return this;
+        return ft;
     }
 
     public  Fraction subtract(Fraction f2){
-        this.tuSo=this.tuSo*f2.mauSo-this.mauSo*f2.tuSo;
-        this.mauSo=this.mauSo*f2.mauSo;
-        if(this.tuSo!=0)
+        Fraction ft=new Fraction();
+        ft.tuSo=this.tuSo*f2.mauSo-this.mauSo*f2.tuSo;
+        ft.mauSo=this.mauSo*f2.mauSo;
+        if(ft.tuSo!=0)
         {
-            reduce();
+            ft.reduce();
         }
-        return this;
+        return ft;
     }
 
     public  Fraction multiply(Fraction f2){
-        this.tuSo=this.tuSo*f2.tuSo;
-        this.mauSo=this.mauSo*f2.mauSo;
-        if(this.tuSo!=0)
+        Fraction ft=new Fraction();
+        ft.tuSo=this.tuSo*f2.tuSo;
+        ft.mauSo=this.mauSo*f2.mauSo;
+        if(ft.tuSo!=0)
         {
-            reduce();
+            ft.reduce();
         }
-        return this;
+        return ft;
     }
 
     public  Fraction divide(Fraction f2){
-        this.tuSo=this.tuSo*f2.mauSo;
-        this.mauSo=this.mauSo*f2.tuSo;
-        if(this.tuSo!=0)
+        Fraction ft=new Fraction();
+        ft.tuSo=this.tuSo*f2.mauSo;
+        ft.mauSo=this.mauSo*f2.tuSo;
+        if(ft.tuSo!=0)
         {
-            reduce();
+            ft.reduce();
         }
-        return this;
+        return ft;
     }
 
-    public  boolean tolerance(Fraction f2){
-        Fraction ft=new Fraction();
-        ft=this.divide(f2);
-        if(ft.tuSo/ft.mauSo<1){
-            return false;
-        }
-        else{
-            return true;
-        }
+    public  int tolerance(Fraction f){
+        float x = f.tuSo*f.mauSo;
+        float y = this.tuSo*this.mauSo;
+        if(x > y) return 1 ;
+        else if(x<y) return -1 ;
+        else return 0;
     }
 
     @Override
@@ -105,10 +107,10 @@ public class Fraction{
         f2.mauSo=8;
 
         System.out.println("reduce fraction");
-        f1.reduce();
+        System.out.println("Phan so toi gian: " +f1.reduce().toString());
 
         System.out.println("reciprocal fraction");
-        f1.reciprocal();
+        System.out.println("Phan so nghich dao: " +f1.reciprocal().toString());
 
         System.out.println("add fraction");
         System.out.println("ket qua cong phan so: "+f1.add(f2));
