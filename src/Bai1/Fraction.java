@@ -25,77 +25,75 @@ public class Fraction{
         return a;
     }
 
-    public static Fraction reduce(Fraction f){
-        Fraction ft=new Fraction();
-        ft.tuSo=f.tuSo/UCLN(Math.abs(f.tuSo),Math.abs(f.mauSo));
-        ft.mauSo=f.mauSo/UCLN(Math.abs(f.tuSo),Math.abs(f.mauSo));
-        return ft;
+    public void  reduce(){
+        int ucln = UCLN(Math.abs(this.tuSo),Math.abs(this.mauSo));
+        this.tuSo=this.tuSo/ucln;
+        this.mauSo=this.mauSo/ucln;
+        System.out.println("Phan so toi gian: "+this.toString());
     }
 
-    public static Fraction reciprocal(Fraction f){
-        Fraction ft=new Fraction();
-        ft.tuSo=f.mauSo;
-        ft.mauSo=f.tuSo;
-        return ft;
+    public  void reciprocal(){
+        int temp=0;
+        temp=this.tuSo;
+        this.tuSo=this.mauSo;
+        this.mauSo=temp;
+        System.out.println("Phan so nghich dao: "+this.toString());
     }
 
-    public static Fraction add(Fraction f1, Fraction f2){
-        Fraction ft=new Fraction();
-        ft.tuSo=f1.tuSo*f2.mauSo+f1.mauSo*f2.tuSo;
-        ft.mauSo=f1.mauSo*f2.mauSo;
-        if(ft.tuSo!=0)
+    public  Fraction add(Fraction f2){
+        this.tuSo=this.tuSo*f2.mauSo+this.mauSo*f2.tuSo;
+        this.mauSo=this.mauSo*f2.mauSo;
+        if(this.tuSo!=0)
         {
-            reduce(ft);
+            this.reduce();
         }
-        return ft;
+        return this;
     }
 
-    public static Fraction subtract(Fraction f1, Fraction f2){
-        Fraction ft=new Fraction();
-        ft.tuSo=f1.tuSo*f2.mauSo-f1.mauSo*f2.tuSo;
-        ft.mauSo=f1.mauSo*f2.mauSo;
-        if(ft.tuSo!=0)
+    public  Fraction subtract(Fraction f2){
+        this.tuSo=this.tuSo*f2.mauSo-this.mauSo*f2.tuSo;
+        this.mauSo=this.mauSo*f2.mauSo;
+        if(this.tuSo!=0)
         {
-            reduce(ft);
+            reduce();
         }
-        return ft;
+        return this;
     }
 
-    public static Fraction multiply(Fraction f1, Fraction f2){
-        Fraction ft=new Fraction();
-        ft.tuSo=f1.tuSo*f2.tuSo;
-        ft.mauSo=f1.mauSo*f2.mauSo;
-        if(ft.tuSo!=0)
+    public  Fraction multiply(Fraction f2){
+        this.tuSo=this.tuSo*f2.tuSo;
+        this.mauSo=this.mauSo*f2.mauSo;
+        if(this.tuSo!=0)
         {
-            reduce(ft);
+            reduce();
         }
-        return ft;
+        return this;
     }
 
-    public static Fraction divide(Fraction f1, Fraction f2){
-        Fraction ft=new Fraction();
-        ft.tuSo=f1.tuSo*f2.mauSo;
-        ft.mauSo=f1.mauSo*f2.tuSo;
-        if(ft.tuSo!=0)
+    public  Fraction divide(Fraction f2){
+        this.tuSo=this.tuSo*f2.mauSo;
+        this.mauSo=this.mauSo*f2.tuSo;
+        if(this.tuSo!=0)
         {
-            reduce(ft);
+            reduce();
         }
-        return ft;
+        return this;
     }
 
-    public static void tolerance(Fraction f1, Fraction f2){
+    public  boolean tolerance(Fraction f2){
         Fraction ft=new Fraction();
-        ft=ft.divide(f1,f2);
+        ft=this.divide(f2);
         if(ft.tuSo/ft.mauSo<1){
-            System.out.println(printFraction(f1)+"<"+printFraction(f2));
+            return false;
         }
         else{
-            System.out.println(printFraction(f1)+">"+printFraction(f2));
+            return true;
         }
     }
 
-    public static String printFraction(Fraction f){
-        return f.tuSo+"/"+f.mauSo;
+    @Override
+    public  String toString(){
+        return this.tuSo+"/"+this.mauSo;
     }
 
     public static void main(String[] args){
@@ -107,25 +105,25 @@ public class Fraction{
         f2.mauSo=8;
 
         System.out.println("reduce fraction");
-        System.out.println(printFraction(reduce(f1)));
+        f1.reduce();
 
         System.out.println("reciprocal fraction");
-        System.out.println(printFraction(reciprocal(f1)));
+        f1.reciprocal();
 
         System.out.println("add fraction");
-        System.out.println(printFraction(add(f1,f2)));
+        System.out.println("ket qua cong phan so: "+f1.add(f2));
 
         System.out.println("subtract fraction");
-        System.out.println(printFraction(subtract(f1,f2)));
+        System.out.println("ket qua tru phan so: "+f1.subtract(f2));
 
         System.out.println("multiply fraction");
-        System.out.println(printFraction(multiply(f1,f2)));
+        System.out.println("ket qua nhan phan so: "+f1.multiply(f2));
 
         System.out.println("divide fraction");
-        System.out.println(printFraction(divide(f1,f2)));
+        System.out.println("ket qua chia phan so: "+f1.divide(f2));
 
         System.out.println("tolerance fraction");
-        tolerance(f1,f2);
+        System.out.println("ket qua so sanh phan so: "+f1.tolerance(f2));
 
 
     }
