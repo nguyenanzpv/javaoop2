@@ -29,6 +29,19 @@ public class Documentation extends Book {
         System.out.print("Status: "+this.status);
     }
 
+    @Override
+    public double totalMoney() {
+        if(status.name()=="NEW")
+        {
+            return quantity*smallPrice;
+        }
+        else
+        {
+            return quantity*smallPrice*0.5;
+        }
+    }
+
+
     public Status getStatus() {
         return status;
     }

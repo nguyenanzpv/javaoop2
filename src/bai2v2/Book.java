@@ -37,6 +37,9 @@ public abstract class Book {
 
     public abstract void subOutput();
 
+    public abstract double totalMoney();
+    
+
     public Book() {
 
     }

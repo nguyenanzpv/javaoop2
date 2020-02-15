@@ -15,4 +15,19 @@ public class Books {
             books.get(i).output();
         }
     }
+     public double getTotalMoney(Book book){
+        double total=0;
+        for(int i=0;i<books.size();i++){
+            total += book.totalMoney();
+         }
+        return total;
+     }
+
+     public double getAverageSmallUnit(Book book){
+         double total=0;
+         for(int i=0;i<books.size();i++){
+             total += book.smallPrice;
+         }
+         return total/books.size();
+     }
 }

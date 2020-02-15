@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0439d106-074d-4751-acc4-e50f80c1edf0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai2v2/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai2v2/Books.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai2v2/Documentation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai2v2/Execution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai2v2/ReferencedBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bai2v2/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaOOPExercise/Bai1/Fraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaOOPExercise/Bai1/Fraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaOOPExercise/Bai2/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaOOPExercise/Bai2/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaOOPExercise/META-INF/JavaOOPExercise.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaOOPExercise/META-INF/JavaOOPExercise.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/Books.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/Books.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/Documentation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/Documentation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/Execution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/Execution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/ReferencedBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaOOPExercise/bai2v2/ReferencedBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai2v2/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2v2/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai2v2/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2v2/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai2v2/Documentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2v2/Documentation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai2v2/Execution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2v2/Execution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai2v2/ReferencedBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2v2/ReferencedBook.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

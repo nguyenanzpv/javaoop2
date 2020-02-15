@@ -23,6 +23,11 @@ public class ReferencedBook extends Book {
 
     }
 
+    @Override
+    public double totalMoney() {
+        return (quantity*smallPrice)+tax;
+    }
+
     public double getTax() {
         return tax;
     }
